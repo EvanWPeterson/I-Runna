@@ -1,0 +1,398 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D126260A1E395A5F0095BCC0 /* RunGroupListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12626091E395A5F0095BCC0 /* RunGroupListViewController.swift */; };
+		D12626101E3961DE0095BCC0 /* addRunGroupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D126260F1E3961DE0095BCC0 /* addRunGroupDetailViewController.swift */; };
+		D12626121E3971BF0095BCC0 /* CloudKitSyncable .swift in Sources */ = {isa = PBXBuildFile; fileRef = D12626111E3971BF0095BCC0 /* CloudKitSyncable .swift */; };
+		D1298D141E3912CF002CB134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1298D131E3912CF002CB134 /* AppDelegate.swift */; };
+		D1298D191E3912CF002CB134 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1298D171E3912CF002CB134 /* Main.storyboard */; };
+		D1298D1B1E3912CF002CB134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1298D1A1E3912CF002CB134 /* Assets.xcassets */; };
+		D1298D1E1E3912CF002CB134 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1298D1C1E3912CF002CB134 /* LaunchScreen.storyboard */; };
+		D1298D271E39133C002CB134 /* RunGroup .swift in Sources */ = {isa = PBXBuildFile; fileRef = D1298D261E39133C002CB134 /* RunGroup .swift */; };
+		D1298D2C1E391956002CB134 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1298D2B1E391956002CB134 /* CloudKit.framework */; };
+		D1298D2E1E391A1F002CB134 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1298D2D1E391A1F002CB134 /* CloudKitManager.swift */; };
+		D1298D311E391A8E002CB134 /* runGroupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1298D301E391A8E002CB134 /* runGroupController.swift */; };
+		D1298D341E392322002CB134 /* RunInfo .swift in Sources */ = {isa = PBXBuildFile; fileRef = D1298D331E392322002CB134 /* RunInfo .swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D12626091E395A5F0095BCC0 /* RunGroupListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunGroupListViewController.swift; sourceTree = "<group>"; };
+		D126260F1E3961DE0095BCC0 /* addRunGroupDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addRunGroupDetailViewController.swift; sourceTree = "<group>"; };
+		D12626111E3971BF0095BCC0 /* CloudKitSyncable .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CloudKitSyncable .swift"; sourceTree = "<group>"; };
+		D1298D101E3912CF002CB134 /* I Runna.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "I Runna.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1298D131E3912CF002CB134 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D1298D181E3912CF002CB134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D1298D1A1E3912CF002CB134 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D1298D1D1E3912CF002CB134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D1298D1F1E3912CF002CB134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1298D261E39133C002CB134 /* RunGroup .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RunGroup .swift"; sourceTree = "<group>"; };
+		D1298D291E391941002CB134 /* I Runna.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "I Runna.entitlements"; sourceTree = "<group>"; };
+		D1298D2B1E391956002CB134 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		D1298D2D1E391A1F002CB134 /* CloudKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
+		D1298D301E391A8E002CB134 /* runGroupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = runGroupController.swift; sourceTree = "<group>"; };
+		D1298D331E392322002CB134 /* RunInfo .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RunInfo .swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D1298D0D1E3912CF002CB134 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1298D2C1E391956002CB134 /* CloudKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D1298D071E3912CF002CB134 = {
+			isa = PBXGroup;
+			children = (
+				D1298D121E3912CF002CB134 /* I Runna */,
+				D1298D111E3912CF002CB134 /* Products */,
+				D1298D2A1E391956002CB134 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D1298D111E3912CF002CB134 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1298D101E3912CF002CB134 /* I Runna.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D1298D121E3912CF002CB134 /* I Runna */ = {
+			isa = PBXGroup;
+			children = (
+				D1298D291E391941002CB134 /* I Runna.entitlements */,
+				D1298D131E3912CF002CB134 /* AppDelegate.swift */,
+				D1298D281E391343002CB134 /* Model */,
+				D1298D2F1E391A23002CB134 /* Helper */,
+				D1298D321E391A95002CB134 /* ModelControllers */,
+				D146187B1E3949E200C4BE3C /* View Controllers */,
+				D1298D251E3912F7002CB134 /* Resources */,
+			);
+			path = "I Runna";
+			sourceTree = "<group>";
+		};
+		D1298D251E3912F7002CB134 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D1298D171E3912CF002CB134 /* Main.storyboard */,
+				D1298D1A1E3912CF002CB134 /* Assets.xcassets */,
+				D1298D1C1E3912CF002CB134 /* LaunchScreen.storyboard */,
+				D1298D1F1E3912CF002CB134 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D1298D281E391343002CB134 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D1298D261E39133C002CB134 /* RunGroup .swift */,
+				D1298D331E392322002CB134 /* RunInfo .swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D1298D2A1E391956002CB134 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1298D2B1E391956002CB134 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D1298D2F1E391A23002CB134 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D1298D2D1E391A1F002CB134 /* CloudKitManager.swift */,
+				D12626111E3971BF0095BCC0 /* CloudKitSyncable .swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		D1298D321E391A95002CB134 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D1298D301E391A8E002CB134 /* runGroupController.swift */,
+			);
+			name = ModelControllers;
+			sourceTree = "<group>";
+		};
+		D146187B1E3949E200C4BE3C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D12626091E395A5F0095BCC0 /* RunGroupListViewController.swift */,
+				D126260F1E3961DE0095BCC0 /* addRunGroupDetailViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D1298D0F1E3912CF002CB134 /* I Runna */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1298D221E3912CF002CB134 /* Build configuration list for PBXNativeTarget "I Runna" */;
+			buildPhases = (
+				D1298D0C1E3912CF002CB134 /* Sources */,
+				D1298D0D1E3912CF002CB134 /* Frameworks */,
+				D1298D0E1E3912CF002CB134 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "I Runna";
+			productName = "I Runna";
+			productReference = D1298D101E3912CF002CB134 /* I Runna.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D1298D081E3912CF002CB134 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Evan Peterson";
+				TargetAttributes = {
+					D1298D0F1E3912CF002CB134 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = LG7M6RDJ63;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = D1298D0B1E3912CF002CB134 /* Build configuration list for PBXProject "I Runna" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D1298D071E3912CF002CB134;
+			productRefGroup = D1298D111E3912CF002CB134 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D1298D0F1E3912CF002CB134 /* I Runna */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D1298D0E1E3912CF002CB134 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1298D1E1E3912CF002CB134 /* LaunchScreen.storyboard in Resources */,
+				D1298D1B1E3912CF002CB134 /* Assets.xcassets in Resources */,
+				D1298D191E3912CF002CB134 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D1298D0C1E3912CF002CB134 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1298D271E39133C002CB134 /* RunGroup .swift in Sources */,
+				D1298D341E392322002CB134 /* RunInfo .swift in Sources */,
+				D12626121E3971BF0095BCC0 /* CloudKitSyncable .swift in Sources */,
+				D1298D311E391A8E002CB134 /* runGroupController.swift in Sources */,
+				D1298D141E3912CF002CB134 /* AppDelegate.swift in Sources */,
+				D126260A1E395A5F0095BCC0 /* RunGroupListViewController.swift in Sources */,
+				D1298D2E1E391A1F002CB134 /* CloudKitManager.swift in Sources */,
+				D12626101E3961DE0095BCC0 /* addRunGroupDetailViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D1298D171E3912CF002CB134 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1298D181E3912CF002CB134 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D1298D1C1E3912CF002CB134 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1298D1D1E3912CF002CB134 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D1298D201E3912CF002CB134 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D1298D211E3912CF002CB134 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D1298D231E3912CF002CB134 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "I Runna/I Runna.entitlements";
+				DEVELOPMENT_TEAM = LG7M6RDJ63;
+				INFOPLIST_FILE = "I Runna/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evanpeterson.I-Runna";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D1298D241E3912CF002CB134 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "I Runna/I Runna.entitlements";
+				DEVELOPMENT_TEAM = LG7M6RDJ63;
+				INFOPLIST_FILE = "I Runna/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evanpeterson.I-Runna";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D1298D0B1E3912CF002CB134 /* Build configuration list for PBXProject "I Runna" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1298D201E3912CF002CB134 /* Debug */,
+				D1298D211E3912CF002CB134 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1298D221E3912CF002CB134 /* Build configuration list for PBXNativeTarget "I Runna" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1298D231E3912CF002CB134 /* Debug */,
+				D1298D241E3912CF002CB134 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D1298D081E3912CF002CB134 /* Project object */;
+}
