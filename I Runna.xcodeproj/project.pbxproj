@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D11AF2381E4246CB0095897A /* AddRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11AF2371E4246CB0095897A /* AddRunViewController.swift */; };
+		D11AF23A1E424F240095897A /* RunInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11AF2391E424F240095897A /* RunInfoController.swift */; };
+		D11AF23E1E43A59A0095897A /* RunInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11AF23D1E43A59A0095897A /* RunInfoTableViewCell.swift */; };
+		D11AF2441E43B1520095897A /* RunGroupInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11AF2431E43B1520095897A /* RunGroupInfoViewController.swift */; };
 		D126260A1E395A5F0095BCC0 /* RunGroupListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12626091E395A5F0095BCC0 /* RunGroupListViewController.swift */; };
-		D12626101E3961DE0095BCC0 /* addRunGroupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D126260F1E3961DE0095BCC0 /* addRunGroupDetailViewController.swift */; };
+		D12626101E3961DE0095BCC0 /* AddRunGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D126260F1E3961DE0095BCC0 /* AddRunGroupViewController.swift */; };
 		D12626121E3971BF0095BCC0 /* CloudKitSyncable .swift in Sources */ = {isa = PBXBuildFile; fileRef = D12626111E3971BF0095BCC0 /* CloudKitSyncable .swift */; };
+		D12626151E3A763D0095BCC0 /* RunGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12626141E3A763D0095BCC0 /* RunGroupTableViewCell.swift */; };
+		D12626171E3A7AF80095BCC0 /* SearchableRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12626161E3A7AF80095BCC0 /* SearchableRecord.swift */; };
+		D12626411E3BEDAB0095BCC0 /* PhotoSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12626401E3BEDAB0095BCC0 /* PhotoSelectViewController.swift */; };
 		D1298D141E3912CF002CB134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1298D131E3912CF002CB134 /* AppDelegate.swift */; };
 		D1298D191E3912CF002CB134 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1298D171E3912CF002CB134 /* Main.storyboard */; };
 		D1298D1B1E3912CF002CB134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1298D1A1E3912CF002CB134 /* Assets.xcassets */; };
@@ -17,14 +24,21 @@
 		D1298D271E39133C002CB134 /* RunGroup .swift in Sources */ = {isa = PBXBuildFile; fileRef = D1298D261E39133C002CB134 /* RunGroup .swift */; };
 		D1298D2C1E391956002CB134 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1298D2B1E391956002CB134 /* CloudKit.framework */; };
 		D1298D2E1E391A1F002CB134 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1298D2D1E391A1F002CB134 /* CloudKitManager.swift */; };
-		D1298D311E391A8E002CB134 /* runGroupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1298D301E391A8E002CB134 /* runGroupController.swift */; };
+		D1298D311E391A8E002CB134 /* RunGroupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1298D301E391A8E002CB134 /* RunGroupController.swift */; };
 		D1298D341E392322002CB134 /* RunInfo .swift in Sources */ = {isa = PBXBuildFile; fileRef = D1298D331E392322002CB134 /* RunInfo .swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D11AF2371E4246CB0095897A /* AddRunViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRunViewController.swift; sourceTree = "<group>"; };
+		D11AF2391E424F240095897A /* RunInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunInfoController.swift; sourceTree = "<group>"; };
+		D11AF23D1E43A59A0095897A /* RunInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunInfoTableViewCell.swift; sourceTree = "<group>"; };
+		D11AF2431E43B1520095897A /* RunGroupInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunGroupInfoViewController.swift; sourceTree = "<group>"; };
 		D12626091E395A5F0095BCC0 /* RunGroupListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunGroupListViewController.swift; sourceTree = "<group>"; };
-		D126260F1E3961DE0095BCC0 /* addRunGroupDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addRunGroupDetailViewController.swift; sourceTree = "<group>"; };
+		D126260F1E3961DE0095BCC0 /* AddRunGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRunGroupViewController.swift; sourceTree = "<group>"; };
 		D12626111E3971BF0095BCC0 /* CloudKitSyncable .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CloudKitSyncable .swift"; sourceTree = "<group>"; };
+		D12626141E3A763D0095BCC0 /* RunGroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunGroupTableViewCell.swift; sourceTree = "<group>"; };
+		D12626161E3A7AF80095BCC0 /* SearchableRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchableRecord.swift; sourceTree = "<group>"; };
+		D12626401E3BEDAB0095BCC0 /* PhotoSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSelectViewController.swift; sourceTree = "<group>"; };
 		D1298D101E3912CF002CB134 /* I Runna.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "I Runna.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1298D131E3912CF002CB134 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1298D181E3912CF002CB134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -35,7 +49,7 @@
 		D1298D291E391941002CB134 /* I Runna.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "I Runna.entitlements"; sourceTree = "<group>"; };
 		D1298D2B1E391956002CB134 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		D1298D2D1E391A1F002CB134 /* CloudKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
-		D1298D301E391A8E002CB134 /* runGroupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = runGroupController.swift; sourceTree = "<group>"; };
+		D1298D301E391A8E002CB134 /* RunGroupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunGroupController.swift; sourceTree = "<group>"; };
 		D1298D331E392322002CB134 /* RunInfo .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RunInfo .swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,6 +65,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D12626131E3A74AB0095BCC0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D12626141E3A763D0095BCC0 /* RunGroupTableViewCell.swift */,
+				D11AF23D1E43A59A0095897A /* RunInfoTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		D1298D071E3912CF002CB134 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +100,7 @@
 				D1298D2F1E391A23002CB134 /* Helper */,
 				D1298D321E391A95002CB134 /* ModelControllers */,
 				D146187B1E3949E200C4BE3C /* View Controllers */,
+				D12626131E3A74AB0095BCC0 /* Views */,
 				D1298D251E3912F7002CB134 /* Resources */,
 			);
 			path = "I Runna";
@@ -98,6 +122,7 @@
 			children = (
 				D1298D261E39133C002CB134 /* RunGroup .swift */,
 				D1298D331E392322002CB134 /* RunInfo .swift */,
+				D12626161E3A7AF80095BCC0 /* SearchableRecord.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -122,7 +147,8 @@
 		D1298D321E391A95002CB134 /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D1298D301E391A8E002CB134 /* runGroupController.swift */,
+				D1298D301E391A8E002CB134 /* RunGroupController.swift */,
+				D11AF2391E424F240095897A /* RunInfoController.swift */,
 			);
 			name = ModelControllers;
 			sourceTree = "<group>";
@@ -131,7 +157,10 @@
 			isa = PBXGroup;
 			children = (
 				D12626091E395A5F0095BCC0 /* RunGroupListViewController.swift */,
-				D126260F1E3961DE0095BCC0 /* addRunGroupDetailViewController.swift */,
+				D126260F1E3961DE0095BCC0 /* AddRunGroupViewController.swift */,
+				D11AF2431E43B1520095897A /* RunGroupInfoViewController.swift */,
+				D11AF2371E4246CB0095897A /* AddRunViewController.swift */,
+				D12626401E3BEDAB0095BCC0 /* PhotoSelectViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -217,14 +246,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D12626171E3A7AF80095BCC0 /* SearchableRecord.swift in Sources */,
 				D1298D271E39133C002CB134 /* RunGroup .swift in Sources */,
+				D11AF2441E43B1520095897A /* RunGroupInfoViewController.swift in Sources */,
+				D12626151E3A763D0095BCC0 /* RunGroupTableViewCell.swift in Sources */,
 				D1298D341E392322002CB134 /* RunInfo .swift in Sources */,
+				D11AF23E1E43A59A0095897A /* RunInfoTableViewCell.swift in Sources */,
 				D12626121E3971BF0095BCC0 /* CloudKitSyncable .swift in Sources */,
-				D1298D311E391A8E002CB134 /* runGroupController.swift in Sources */,
+				D11AF2381E4246CB0095897A /* AddRunViewController.swift in Sources */,
+				D11AF23A1E424F240095897A /* RunInfoController.swift in Sources */,
+				D1298D311E391A8E002CB134 /* RunGroupController.swift in Sources */,
+				D12626411E3BEDAB0095BCC0 /* PhotoSelectViewController.swift in Sources */,
 				D1298D141E3912CF002CB134 /* AppDelegate.swift in Sources */,
 				D126260A1E395A5F0095BCC0 /* RunGroupListViewController.swift in Sources */,
 				D1298D2E1E391A1F002CB134 /* CloudKitManager.swift in Sources */,
-				D12626101E3961DE0095BCC0 /* addRunGroupDetailViewController.swift in Sources */,
+				D12626101E3961DE0095BCC0 /* AddRunGroupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,13 +383,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "I Runna/I Runna.entitlements";
 				DEVELOPMENT_TEAM = LG7M6RDJ63;
 				INFOPLIST_FILE = "I Runna/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.evanpeterson.I-Runna";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -361,13 +400,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "I Runna/I Runna.entitlements";
 				DEVELOPMENT_TEAM = LG7M6RDJ63;
 				INFOPLIST_FILE = "I Runna/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.evanpeterson.I-Runna";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

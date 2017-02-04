@@ -28,10 +28,10 @@
             </objects>
             <point key="canvasLocation" x="269" y="217"/>
         </scene>
-        <!--Create Run Group-->
+        <!--Create Run Group -->
         <scene sceneID="r19-Bg-Rlq">
             <objects>
-                <viewController id="Qs1-aR-lZL" customClass="addRunGroupDetailViewController" customModule="I_Runna" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Qs1-aR-lZL" customClass="AddRunGroupViewController" customModule="I_Runna" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Scy-jF-EGW"/>
                         <viewControllerLayoutGuide type="bottom" id="5A1-ed-vBF"/>
@@ -41,39 +41,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Run Group Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DBd-4Q-Sxm">
-                                <rect key="frame" x="35" y="226" width="304" height="30"/>
+                                <rect key="frame" x="35" y="291" width="304" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="location of Run Group " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2YH-bc-9HX">
-                                <rect key="frame" x="35" y="307" width="304" height="30"/>
+                                <rect key="frame" x="35" y="349" width="304" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Run Pace" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oEh-7F-0s6">
-                                <rect key="frame" x="35" y="384" width="304" height="30"/>
+                                <rect key="frame" x="35" y="408" width="304" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Run Logo " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8f8-Ko-wlH">
-                                <rect key="frame" x="198" y="179" width="141" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXx-i2-2hM">
                                 <rect key="frame" x="16" y="588" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save Run Group"/>
                                 <connections>
-                                    <action selector="saveGroupRunButtonTapped:" destination="Qs1-aR-lZL" eventType="touchUpInside" id="XQ5-y9-3h7"/>
+                                    <action selector="saveRunButtonTapped:" destination="Qs1-aR-lZL" eventType="touchUpInside" id="I4h-de-nBa"/>
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9K1-FC-6J0">
@@ -83,22 +76,49 @@
                                     <segue destination="Aqf-ho-j0b" kind="embed" identifier="pickImage" id="yP2-wi-fb1"/>
                                 </connections>
                             </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Run Logo " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8f8-Ko-wlH">
+                                <rect key="frame" x="39" y="208" width="81" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create Run Group" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bj-dN-TS2">
+                                <rect key="frame" x="94" y="20" width="186" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zl-KE-4eG">
+                                <rect key="frame" x="16" y="24" width="45" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="cancelButtonTapped:" destination="Qs1-aR-lZL" eventType="touchUpInside" id="DjW-PU-jac"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Create Run Group" id="g4C-9f-zY8"/>
+                    <navigationItem key="navigationItem" title="Create Run Group " id="q0K-cK-0sK">
+                        <barButtonItem key="rightBarButtonItem" id="hli-HJ-lPY"/>
+                    </navigationItem>
                     <connections>
-                        <outlet property="runGroupLogo" destination="9K1-FC-6J0" id="6Yh-ed-JbB"/>
+                        <outlet property="locationGroupRunTextField" destination="2YH-bc-9HX" id="EbD-we-22G"/>
+                        <outlet property="runGroupNameTextField" destination="DBd-4Q-Sxm" id="yUn-zn-VL4"/>
+                        <outlet property="runLogoImageView" destination="9K1-FC-6J0" id="Ri1-I0-hFN"/>
+                        <outlet property="runPaceTextField" destination="oEh-7F-0s6" id="emf-mm-Lls"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3IU-uL-4NU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1205.5999999999999" y="-1146.4767616191905"/>
+            <point key="canvasLocation" x="1240.8" y="-1213.0434782608697"/>
         </scene>
         <!--I Runna-->
         <scene sceneID="HaD-Y9-D6u">
             <objects>
-                <viewController id="1Fx-o5-JD8" customClass="RunGroupListViewController" customModule="I_Runna" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="1Fx-o5-JD8" customClass="RunGroupListViewController" customModule="I_Runna" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Shb-kV-DeT"/>
                         <viewControllerLayoutGuide type="bottom" id="HLY-QH-rm7"/>
@@ -107,104 +127,190 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mLd-0e-bvZ">
-                                <rect key="frame" x="0.0" y="72" width="375" height="67"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="118" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yFT-8d-5K8">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="rgPostCell" rowHeight="118" id="IfX-d2-Dbj" customClass="RunGroupTableViewCell" customModule="I_Runna" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="118"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IfX-d2-Dbj" id="5YT-os-Syo">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="117"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Run Pace " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ax3-6w-jgv">
+                                                    <rect key="frame" x="121" y="8" width="132" height="28"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Run Group Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cp4-wo-amo">
+                                                    <rect key="frame" x="195" y="43" width="172" height="26"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mex-wo-r2A">
+                                                    <rect key="frame" x="8" y="43" width="94" height="68"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location of Group Run" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCb-rl-Cge">
+                                                    <rect key="frame" x="195" y="77" width="172" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="runGroupLocationLabel" destination="ZCb-rl-Cge" id="hsi-Jf-ktj"/>
+                                            <outlet property="runGroupLogoImageView" destination="mex-wo-r2A" id="eUv-PG-Goz"/>
+                                            <outlet property="runGroupNameLabel" destination="cp4-wo-amo" id="964-bE-8Db"/>
+                                            <outlet property="runPaceLabel" destination="ax3-6w-jgv" id="0gL-BM-Iah"/>
+                                            <segue destination="g8b-z6-OYP" kind="show" identifier="toRunInfo" id="EDo-6e-xeE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
-                                    <segue destination="hYQ-CK-IJs" kind="show" id="nQm-bT-t7p"/>
+                                    <outlet property="dataSource" destination="1Fx-o5-JD8" id="pfT-Bi-5wx"/>
+                                    <outlet property="delegate" destination="1Fx-o5-JD8" id="fHG-qY-tpc"/>
                                 </connections>
-                            </containerView>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="mLd-0e-bvZ" firstAttribute="top" secondItem="Shb-kV-DeT" secondAttribute="bottom" constant="8" id="17z-rf-Him"/>
-                            <constraint firstItem="HLY-QH-rm7" firstAttribute="top" secondItem="mLd-0e-bvZ" secondAttribute="bottom" constant="479" id="GCX-m4-bTp"/>
-                            <constraint firstItem="mLd-0e-bvZ" firstAttribute="leading" secondItem="Bqa-yc-pD7" secondAttribute="leading" id="U1f-QJ-3rz"/>
-                            <constraint firstAttribute="trailing" secondItem="mLd-0e-bvZ" secondAttribute="trailing" id="k6r-7n-E92"/>
+                            <constraint firstItem="yFT-8d-5K8" firstAttribute="top" secondItem="Shb-kV-DeT" secondAttribute="bottom" id="0Wc-hd-jWY"/>
+                            <constraint firstItem="yFT-8d-5K8" firstAttribute="leading" secondItem="Bqa-yc-pD7" secondAttribute="leading" id="1cf-iK-cdB"/>
+                            <constraint firstAttribute="trailing" secondItem="yFT-8d-5K8" secondAttribute="trailing" id="TUy-4d-MFa"/>
+                            <constraint firstItem="HLY-QH-rm7" firstAttribute="top" secondItem="yFT-8d-5K8" secondAttribute="bottom" id="XHW-Bx-ZUe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="I Runna" id="S0g-J3-Ay5">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="JcS-Dt-0XQ">
                             <connections>
-                                <segue destination="Qs1-aR-lZL" kind="show" id="i8u-yV-f7p"/>
+                                <segue destination="Qs1-aR-lZL" kind="presentation" id="4mJ-AK-quM"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="yFT-8d-5K8" id="g0i-oP-nwM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r1K-SJ-vTS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1207.2" y="-438.53073463268368"/>
+            <point key="canvasLocation" x="1312.8" y="-439.43028485757122"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="KeA-yO-Fkc">
+        <!--Up & Running-->
+        <scene sceneID="LHc-2C-c24">
             <objects>
-                <tableViewController id="hYQ-CK-IJs" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="112" sectionHeaderHeight="28" sectionFooterHeight="28" id="K1v-Gb-8uq">
+                <viewController id="g8b-z6-OYP" customClass="RunGroupInfoViewController" customModule="I_Runna" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gxp-U7-7nc"/>
+                        <viewControllerLayoutGuide type="bottom" id="aA9-NY-ByA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BNw-YI-sWn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zGV-fD-ZBW">
+                                <rect key="frame" x="119" y="72" width="137" height="108"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location of Group Run " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3v-c0-Iie">
+                                <rect key="frame" x="16" y="198" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="84" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rge-wu-ttg">
+                                <rect key="frame" x="16" y="340" width="343" height="270"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="runInfoCell" rowHeight="84" id="IDc-pf-Ud8" customClass="RunInfoTableViewCell" customModule="I_Runna" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="84"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IDc-pf-Ud8" id="7EJ-MM-POc">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="83"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="date/time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsf-oD-LrW">
+                                                    <rect key="frame" x="8" y="16" width="73" height="37"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Run Length" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILs-M7-dQP">
+                                                    <rect key="frame" x="98" y="8" width="88" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Run Name " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNE-lZ-yBL">
+                                                    <rect key="frame" x="201" y="16" width="134" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Run Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GN1-T6-xFK">
+                                                    <rect key="frame" x="201" y="45" width="134" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="runDateTimeLabel" destination="vsf-oD-LrW" id="9MJ-eb-c9h"/>
+                                            <outlet property="runLengthLabel" destination="ILs-M7-dQP" id="zMD-Id-gmp"/>
+                                            <outlet property="runLocationLabel" destination="GN1-T6-xFK" id="QQi-6Z-dJV"/>
+                                            <outlet property="runNameLabel" destination="eNE-lZ-yBL" id="x2R-i2-aT2"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RunPace" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKb-5o-G03">
+                                <rect key="frame" x="16" y="265" width="114" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5f-Np-GwA">
+                                <rect key="frame" x="291" y="265" width="59" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Share"/>
+                                <connections>
+                                    <action selector="shareButtonTapped:" destination="g8b-z6-OYP" eventType="touchUpInside" id="0Tm-4y-kIa"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="112" id="1vb-MK-xJA">
-                                <rect key="frame" x="0.0" y="28" width="375" height="112"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1vb-MK-xJA" id="aI7-T7-JLu">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="111"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location of Group Run" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCb-rl-Cge">
-                                            <rect key="frame" x="195" y="56" width="172" height="35"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name of Group Run" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cp4-wo-amo">
-                                            <rect key="frame" x="195" y="22" width="172" height="26"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mex-wo-r2A">
-                                            <rect key="frame" x="8" y="35" width="94" height="68"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Run Pace " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ax3-6w-jgv">
-                                            <rect key="frame" x="110" y="8" width="77" height="28"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="30" id="ajv-Y3-J0X">
-                                <rect key="frame" x="0.0" y="140" width="375" height="30"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ajv-Y3-J0X" id="QIQ-KA-Ttl">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="29"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Next Run " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="StJ-wC-tka">
-                                            <rect key="frame" x="8" y="4" width="75" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="hYQ-CK-IJs" id="hg2-Lo-i4P"/>
-                            <outlet property="delegate" destination="hYQ-CK-IJs" id="WXJ-Mk-QQ1"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FSu-8s-zef" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Up &amp; Running" id="9yu-0g-n2c">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="cpl-2J-pAL">
+                            <connections>
+                                <segue destination="Mh7-ZW-7xD" kind="show" id="eeX-3s-BoP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="runGroupLocationLabel" destination="T3v-c0-Iie" id="hu4-oh-qNK"/>
+                        <outlet property="runLogoImageView" destination="zGV-fD-ZBW" id="0UQ-ZQ-a1t"/>
+                        <outlet property="runPaceLabel" destination="uKb-5o-G03" id="gfx-Az-erh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v6e-li-vjq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1205.5999999999999" y="241.52923538230885"/>
+            <point key="canvasLocation" x="2239.1999999999998" y="-439.43028485757122"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="aIr-Vg-r0o">
@@ -243,46 +349,122 @@
             </objects>
             <point key="canvasLocation" x="268" y="-438.53073463268368"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="0bt-tB-bpK">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PcN-qD-bpq" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rR0-Cx-Tvd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Qs1-aR-lZL" kind="relationship" relationship="rootViewController" id="o3k-3C-9Rn"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kij-tB-7qu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="268" y="-1144"/>
-        </scene>
-        <!--View Controller-->
+        <!--Photo Select View Controller-->
         <scene sceneID="wA2-tM-0vl">
             <objects>
-                <viewController id="Aqf-ho-j0b" sceneMemberID="viewController">
+                <viewController id="Aqf-ho-j0b" customClass="PhotoSelectViewController" customModule="I_Runna" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ajz-ft-axN"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q7v-Xq-1sf"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="iXo-Q6-fs4">
                         <rect key="frame" x="0.0" y="0.0" width="127" height="105"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RKy-xi-40r">
-                                <rect key="frame" x="0.0" y="0.0" width="154" height="111"/>
+                                <rect key="frame" x="0.0" y="0.0" width="127" height="111"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91N-xv-YV1">
+                                <rect key="frame" x="0.0" y="0.0" width="127" height="105"/>
+                                <state key="normal" title="Add Photo"/>
+                                <connections>
+                                    <action selector="addPhotoButtonTapped:" destination="Aqf-ho-j0b" eventType="touchUpInside" id="9MH-YW-Udt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q7v-Xq-1sf" firstAttribute="top" secondItem="91N-xv-YV1" secondAttribute="bottom" id="DJV-ok-zN4"/>
+                            <constraint firstAttribute="trailing" secondItem="91N-xv-YV1" secondAttribute="trailing" id="LIB-PX-TNc"/>
+                            <constraint firstItem="91N-xv-YV1" firstAttribute="leading" secondItem="iXo-Q6-fs4" secondAttribute="leading" id="nDw-XR-IVz"/>
+                            <constraint firstItem="91N-xv-YV1" firstAttribute="top" secondItem="Ajz-ft-axN" secondAttribute="bottom" id="tPh-uv-DCM"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addPhotoButton" destination="91N-xv-YV1" id="XLi-LO-oKb"/>
+                        <outlet property="imageView" destination="RKy-xi-40r" id="7lG-NW-FVH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bmH-k0-Zoc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1836.8" y="-1333.5832083958021"/>
+            <point key="canvasLocation" x="1836" y="-1333.5832083958021"/>
+        </scene>
+        <!--Create Run -->
+        <scene sceneID="f6L-a9-xr9">
+            <objects>
+                <viewController id="Mh7-ZW-7xD" customClass="AddRunViewController" customModule="I_Runna" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2le-Dz-77Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="HoI-mC-pGd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9hP-Ui-z4Y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79m-Nk-QhX">
+                                <rect key="frame" x="107" y="568" width="160" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="Save Run "/>
+                                <connections>
+                                    <action selector="SaveRunButtonTapped:" destination="Mh7-ZW-7xD" eventType="touchUpInside" id="iF1-7F-cFa"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Run Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R3w-L1-ltC">
+                                <rect key="frame" x="139" y="179" width="106" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Run Length" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VSF-Ay-e9c">
+                                <rect key="frame" x="139" y="234" width="106" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Run Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="39i-jE-x9S">
+                                <rect key="frame" x="139" y="280" width="106" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Details of Run " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E8u-kH-M8y">
+                                <rect key="frame" x="139" y="332" width="106" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date/Time" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZLF-DO-Ij8">
+                                <rect key="frame" x="72" y="131" width="240" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="dateTimeTextField:" destination="Mh7-ZW-7xD" eventType="editingDidBegin" id="Alf-pB-R94"/>
+                                    <outlet property="delegate" destination="Mh7-ZW-7xD" id="Zsj-jB-rYV"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Create Run " id="HGM-TA-gnc"/>
+                    <connections>
+                        <outlet property="runDateTime" destination="ZLF-DO-Ij8" id="Tew-BX-7xS"/>
+                        <outlet property="runDetail" destination="E8u-kH-M8y" id="g6G-d2-AkR"/>
+                        <outlet property="runLength" destination="VSF-Ay-e9c" id="lP3-fj-e8M"/>
+                        <outlet property="runLocation" destination="39i-jE-x9S" id="n0I-x0-tNq"/>
+                        <outlet property="runName" destination="VSF-Ay-e9c" id="eqF-DM-6NV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ojf-7O-4YO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2436" y="-1146.4767616191905"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="i8u-yV-f7p"/>
-    </inferredMetricsTieBreakers>
 </document>

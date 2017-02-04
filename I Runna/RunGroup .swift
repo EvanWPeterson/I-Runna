@@ -16,11 +16,13 @@ class RunGroup {
     let kPhotoURL = "PhotoURL"
     let kRunGroupName = "runGroupName"
     let kRunPace = "runPace"
+    var kRunGroupLocation = "runGroupLocation"
     
     var runLogo: Data?
     var runGroupName: String
     //Double?
     var runPace: String
+    var runGroupLocation: String
     
     var recordType: String { return "RunGroup" }
     var cloudKitRecordID: CKRecordID?
@@ -46,20 +48,23 @@ class RunGroup {
     }
     
     
-    init(runLogo: Data, runGroupName: String, runPace: String) {
+    init(runLogo: Data, runGroupName: String, runPace: String, runGroupLocation: String) {
         self.runLogo = runLogo
         self.runGroupName = runGroupName
         self.runPace = runPace
+        self.runGroupLocation = runGroupLocation
     }
     
     required init?(record: CKRecord) {
         guard let picAsset = record.value(forKey: kPhotoURL) as? CKAsset,
         let runGroupString = record.value(forKey: kRunGroupName) as? String,
-        let runPaceDouble = record.value(forKey: kRunPace) as? String else { return nil }
+        let runPaceDouble = record.value(forKey: kRunPace) as? String,
+        let runLocation = record.value(forKey: kRunGroupLocation) as? String else { return nil }
         
         self.runLogo = try? Data(contentsOf: picAsset.fileURL)
         self.runGroupName = runGroupString
         self.runPace = runPaceDouble
+        self.runGroupLocation = runLocation
         self.cloudKitRecordID = record.recordID
         
     }
