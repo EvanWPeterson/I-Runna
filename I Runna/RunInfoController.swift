@@ -17,8 +17,8 @@ class RunInfoController {
     
     var cloudKitManager = CloudKitManager()
     
-    func createRun(dateTime: Date, rLength: Double, rName: String, runLocation: String, rDetails: String) {
-        let rInfo = RunInfo(runName: rName, runLength: rLength, runTime: dateTime, detailsOfRun: rDetails, runLocation: runLocation)
+    func createRun(dateTime: Date, runLength: Double, runName: String, runLocation: String, runDetails: String) {
+        let rInfo = RunInfo(runName: runName, runLength: runLength, runTime: dateTime, detailsOfRun: runDetails, runLocation: runLocation)
         
         self.runInfo.append(rInfo)
     }

@@ -9,75 +9,100 @@
 import UIKit
 
 class AddRunViewController: UIViewController, UITextFieldDelegate {
-
-
+    
+    
+    @IBOutlet weak var runLengthTextField: UITextField!
+    @IBOutlet weak var runNameTextField: UITextField!
     @IBOutlet weak var runDetail: UITextField!
     @IBOutlet weak var runLocation: UITextField!
-    @IBOutlet weak var runName: UITextField!
-    @IBOutlet weak var runLength: UITextField!
     @IBOutlet weak var runDateTime: UITextField!
     
     var datePicker: UIDatePicker?
-    
+    var runInfo: RunInfo?
     var toolBar: UIToolbar?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let toolBar = UIToolbar().ToolbarPicker(mySelect: #selector(AddRunViewController.dismissPicker))
         runDateTime.inputAccessoryView = toolBar
+        runLengthTextField.keyboardType = UIKeyboardType.decimalPad
+        runLengthTextField.keyboardAppearance = .dark
+        self.view.addSubview(runLengthTextField)
         
-        runLength.keyboardType = UIKeyboardType.decimalPad
-        runLength.keyboardAppearance = .dark
-        self.view.addSubview(runLength)
         
+        runLengthTextField.delegate = self
+        runNameTextField.delegate = self
+        runDetail.delegate = self
+        runLocation.delegate = self
+        runDateTime.delegate = self
+        
+    }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        runLengthTextField.resignFirstResponder()
+        runNameTextField.resignFirstResponder()
+        runDetail.resignFirstResponder()
+        runLocation.resignFirstResponder()
+        runDateTime.resignFirstResponder()
+        
+        return true
     }
     
     
     func dismissPicker() {
         view.endEditing(true)
     }
-
+    
     
     func datePickerChanged(sender: UIDatePicker) {
-        var formatter = DateFormatter()
+        let formatter = DateFormatter()
+        formatter.dateStyle = DateFormatter.Style.medium
+        formatter.timeStyle = DateFormatter.Style.medium
         runDateTime.text = formatter.string(for: sender.date)
-    
+        
     }
     
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    @IBAction func dateTimeTextField(_ sender: UITextField) {
-    
+    @IBAction func runTimeTextField(_ sender: UITextField) {
+        
         let datePickerView: UIDatePicker = UIDatePicker()
         datePickerView.datePickerMode = UIDatePickerMode.dateAndTime
         sender.inputView = datePickerView
         datePickerView.addTarget(self, action: #selector(AddRunViewController.datePickerChanged), for: UIControlEvents.valueChanged)
         datePicker = datePickerView
-   
     }
     
+    
     @IBAction func SaveRunButtonTapped(_ sender: Any) {
-        if let rDetails = runDetail.text, let rLocation = runLocation.text, let rName = runName.text, let rLength = runLength.text, let rDateTime = datePicker?.date {
-            RunInfoController.sharedController.createRun(dateTime: rDateTime, rLength: Double(rLength)!, rName: rName, runLocation: rLocation, rDetails: rDetails)
-            self.dismiss(animated: true, completion: nil)
-        }
-        let alertController = UIAlertController(title: "Missing information", message: "Check your run info", preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        guard let runLength = runLengthTextField.text, let doubleRun = Double(runLength) else { return }
         
-        present(alertController, animated: true, completion: nil)
+        
+        if let runDetails = runDetail.text,
+            let runLocation = runLocation.text,
+            let rName = runNameTextField.text,
+            let rDateTime = datePicker?.date {
+            
+            RunInfoController.sharedController.createRun(dateTime: rDateTime, runLength: doubleRun, runName: rName, runLocation: runLocation, runDetails: runDetails)
+            _ = navigationController?.popViewController(animated: true)
+            
+        } else {
+            
+            let alertController = UIAlertController(title: "Missing information", message: "Check your run info", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            present(alertController, animated: true, completion: nil)
+        }
+        _ = navigationController?.popViewController(animated: true)
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "createRun" {
+            guard let vc = segue.destination as? RunGroupInfoViewController else { return }
+            vc.runInfo = runInfo
+        }
+    }
+    
 }
 
 extension UIToolbar {

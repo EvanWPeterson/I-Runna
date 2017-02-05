@@ -16,11 +16,15 @@ class RunGroupInfoViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var runGroupLocationLabel: UILabel!
     @IBOutlet weak var runLogoImageView: UIImageView!
     
+    
     var runGroup: RunGroup?
+    var runInfo: RunInfo?
+    weak var delegate: RunInfoDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateWithRunGroupPost()
+    
         
     }
     
@@ -61,5 +65,10 @@ class RunGroupInfoViewController: UIViewController, UITableViewDelegate, UITable
         let activityController = UIActivityViewController(activityItems: [runGroup.photo], applicationActivities: nil)
         self.present(activityController, animated: true, completion: nil)
     }
-
+    
 }
+
+protocol RunInfoDelegate: class {
+    func runInfo(_: RunInfo)
+}
+

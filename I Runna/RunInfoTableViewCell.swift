@@ -18,10 +18,12 @@ class RunInfoTableViewCell: UITableViewCell {
   
     func updateWithRunPost(runInfo: RunInfo) {
         runLocationLabel?.text = runInfo.runLocation
-        runNameLabel?.text = runInfo.detailsOfRun
+        runNameLabel?.text = runInfo.runName
         runDateTimeLabel?.text = runInfo.detailsOfRun
 //        runLengthLabel?.text = Double(runInfo.runLength)
         
     }
 
 }
+
+
