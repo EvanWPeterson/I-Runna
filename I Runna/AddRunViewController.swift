@@ -11,22 +11,24 @@ import UIKit
 class AddRunViewController: UIViewController, UITextFieldDelegate {
     
     
+    @IBOutlet weak var runDetailTextField: UITextField!
+    @IBOutlet weak var runLocationTextField: UITextField!
+    @IBOutlet weak var runTimeTextField: UITextField!
     @IBOutlet weak var runLengthTextField: UITextField!
     @IBOutlet weak var runNameTextField: UITextField!
-    @IBOutlet weak var runDetail: UITextField!
-    @IBOutlet weak var runLocation: UITextField!
-    @IBOutlet weak var runDateTime: UITextField!
+    
     
     var datePicker: UIDatePicker?
-    var runInfo: RunInfo?
     var toolBar: UIToolbar?
     
+    var runInfo: RunInfo?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let toolBar = UIToolbar().ToolbarPicker(mySelect: #selector(AddRunViewController.dismissPicker))
-        runDateTime.inputAccessoryView = toolBar
+        runTimeTextField.inputAccessoryView = toolBar
         runLengthTextField.keyboardType = UIKeyboardType.decimalPad
         runLengthTextField.keyboardAppearance = .dark
         self.view.addSubview(runLengthTextField)
@@ -34,9 +36,9 @@ class AddRunViewController: UIViewController, UITextFieldDelegate {
         
         runLengthTextField.delegate = self
         runNameTextField.delegate = self
-        runDetail.delegate = self
-        runLocation.delegate = self
-        runDateTime.delegate = self
+        runDetailTextField.delegate = self
+        runLocationTextField.delegate = self
+        runTimeTextField.delegate = self
         
     }
     
@@ -44,9 +46,9 @@ class AddRunViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         runLengthTextField.resignFirstResponder()
         runNameTextField.resignFirstResponder()
-        runDetail.resignFirstResponder()
-        runLocation.resignFirstResponder()
-        runDateTime.resignFirstResponder()
+        runDetailTextField.resignFirstResponder()
+        runLocationTextField.resignFirstResponder()
+        runTimeTextField.resignFirstResponder()
         
         return true
     }
@@ -61,7 +63,7 @@ class AddRunViewController: UIViewController, UITextFieldDelegate {
         let formatter = DateFormatter()
         formatter.dateStyle = DateFormatter.Style.medium
         formatter.timeStyle = DateFormatter.Style.medium
-        runDateTime.text = formatter.string(for: sender.date)
+        runTimeTextField.text = formatter.string(for: sender.date)
         
     }
     
@@ -79,30 +81,28 @@ class AddRunViewController: UIViewController, UITextFieldDelegate {
         guard let runLength = runLengthTextField.text, let doubleRun = Double(runLength) else { return }
         
         
-        if let runDetails = runDetail.text,
-            let runLocation = runLocation.text,
+        if let runDetails = runDetailTextField.text,
+            let runLocation = runLocationTextField.text,
             let rName = runNameTextField.text,
             let rDateTime = datePicker?.date {
             
             RunInfoController.sharedController.createRun(dateTime: rDateTime, runLength: doubleRun, runName: rName, runLocation: runLocation, runDetails: runDetails)
-            _ = navigationController?.popViewController(animated: true)
             
+            _ = navigationController?.popViewController(animated: true)
         } else {
             
             let alertController = UIAlertController(title: "Missing information", message: "Check your run info", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             present(alertController, animated: true, completion: nil)
         }
-        _ = navigationController?.popViewController(animated: true)
+        
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "createRun" {
-            guard let vc = segue.destination as? RunGroupInfoViewController else { return }
-            vc.runInfo = runInfo
-        }
-    }
-    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "createRun" {            
+//        
+//        }
+//    }
 }
 
 extension UIToolbar {

@@ -15,12 +15,12 @@ class RunInfoTableViewCell: UITableViewCell {
     @IBOutlet weak var runDateTimeLabel: UILabel!
     @IBOutlet weak var runLengthLabel: UILabel!
  
-  
+    
     func updateWithRunPost(runInfo: RunInfo) {
         runLocationLabel?.text = runInfo.runLocation
         runNameLabel?.text = runInfo.runName
-        runDateTimeLabel?.text = runInfo.detailsOfRun
-//        runLengthLabel?.text = Double(runInfo.runLength)
+        runDateTimeLabel?.text = "\(runInfo.runDateTime)"
+        runLengthLabel?.text = "\(runInfo.runLength)"
         
     }
 

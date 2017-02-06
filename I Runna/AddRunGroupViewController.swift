@@ -33,7 +33,11 @@ class AddRunGroupViewController: UIViewController, UITextFieldDelegate, PhotoSel
         locationGroupRunTextField.delegate = self
         runGroupNameTextField.delegate = self
         
+        runPaceTextField.keyboardType = .decimalPad
+        runPaceTextField.keyboardAppearance = .dark
     }
+    
+   
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         runPaceTextField.resignFirstResponder()
@@ -55,8 +59,14 @@ class AddRunGroupViewController: UIViewController, UITextFieldDelegate, PhotoSel
     // Update for location
     
     @IBAction func saveRunButtonTapped(_ sender: Any) {
-        if let image = image, let name = runGroupNameTextField.text, let pace = runPaceTextField.text, let location = locationGroupRunTextField.text {
-            RunGroupController.sharedController.createRunGroup(image: image, name: name, pace: pace, location: location)
+        guard let rPace = runPaceTextField.text, let doubleRun = Double(rPace) else { return }
+        
+        if let image = image,
+            let name = runGroupNameTextField.text,
+            let pace = runPaceTextField.text,
+            let location = locationGroupRunTextField.text {
+            
+            RunGroupController.sharedController.createRunGroup(image: image, name: name, pace: doubleRun, location: location)
             self.dismiss(animated: true, completion: nil)
         } else if runGroupNameTextField.text == nil {
             let alertController = UIAlertController(title: "Missing information", message: "Check your above information", preferredStyle: .alert)
@@ -76,5 +86,8 @@ class AddRunGroupViewController: UIViewController, UITextFieldDelegate, PhotoSel
         dismiss(animated: true, completion: nil)
     }
 }
+
+
+
 
 

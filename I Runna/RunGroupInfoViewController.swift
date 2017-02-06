@@ -10,7 +10,8 @@ import UIKit
 
 class RunGroupInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet weak var tableViewOutlet: UITableView!
+    
+    @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var runPaceLabel: UILabel!
     @IBOutlet weak var runGroupLocationLabel: UILabel!
@@ -19,19 +20,27 @@ class RunGroupInfoViewController: UIViewController, UITableViewDelegate, UITable
     
     var runGroup: RunGroup?
     var runInfo: RunInfo?
-    weak var delegate: RunInfoDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateWithRunGroupPost()
-    
         
+        runLogoImageView.layer.cornerRadius = runLogoImageView.frame.size.height/2
+        runLogoImageView.layer.masksToBounds = true
+        runLogoImageView.layer.borderColor = UIColor.black.cgColor
+        runLogoImageView.layer.borderWidth = 2
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
     
     func updateWithRunGroupPost() {
         guard let runLogo = runGroup?.runLogo else { return }
         
-        runPaceLabel.text = runGroup?.runPace
+        runPaceLabel.text = "\(runGroup?.runPace)MIN/MILE"
         runGroupLocationLabel.text = runGroup?.runGroupLocation
         runLogoImageView.image = UIImage(data: runLogo)
     }
@@ -57,7 +66,15 @@ class RunGroupInfoViewController: UIViewController, UITableViewDelegate, UITable
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-       
+        if segue.identifier == "toMapDetail" {
+           if let indexPath = tableView.indexPathForSelectedRow {
+                    let mapDetail = RunInfoController.sharedController.runInfo[indexPath.row]
+            if let RunMapDetailViewController = segue.destination as? RunMapDetailViewController  {
+                    RunMapDetailViewController.mapDetail = mapDetail
+                }
+            }
+            
+        }
     }
 
     @IBAction func shareButtonTapped(_ sender: Any) {
@@ -68,7 +85,5 @@ class RunGroupInfoViewController: UIViewController, UITableViewDelegate, UITable
     
 }
 
-protocol RunInfoDelegate: class {
-    func runInfo(_: RunInfo)
-}
+
 

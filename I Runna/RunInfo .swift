@@ -20,7 +20,7 @@ class RunInfo {
     
     var runName: String
     var runLength: Double
-    var runTime: Date
+    var runDateTime: Date
     var detailsOfRun: String
     var runLocation: String
     
@@ -30,7 +30,7 @@ class RunInfo {
     init(runName: String, runLength: Double, runTime: Date, detailsOfRun: String, runLocation: String) {
         self.runName = runName
         self.runLength = runLength
-        self.runTime = runTime
+        self.runDateTime = runTime
         self.detailsOfRun = detailsOfRun
         self.runLocation = runLocation
     }
@@ -44,7 +44,7 @@ class RunInfo {
         
         self.runName = runName
         self.runLength = runLength
-        self.runTime = runTime
+        self.runDateTime = runTime
         self.detailsOfRun = detailsOfRun
         self.runLocation = runLocation
         self.cloudKitRecordID = record.recordID
@@ -58,7 +58,7 @@ extension CKRecord {
         
         self[runInfo.kRunName] = runInfo.runName as CKRecordValue?
         self[runInfo.kRunLength] = runInfo.runLength as CKRecordValue?
-        self[runInfo.kRunTime] = runInfo.runTime as CKRecordValue?
+        self[runInfo.kRunTime] = runInfo.runDateTime as CKRecordValue?
         self[runInfo.kDetailsOfRun] = runInfo.detailsOfRun as CKRecordValue?
         self[runInfo.kRunLocation] = runInfo.runLocation as CKRecordValue?
         

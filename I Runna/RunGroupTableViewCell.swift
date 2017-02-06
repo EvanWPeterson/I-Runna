@@ -17,14 +17,17 @@ class RunGroupTableViewCell: UITableViewCell {
 
     
     override func awakeFromNib() {
-        runGroupLogoImageView.layer.cornerRadius = 15
+        runGroupLogoImageView.layer.cornerRadius = runGroupLogoImageView.frame.size.height/2
+        runGroupLogoImageView.layer.masksToBounds = true
+        runGroupLogoImageView.layer.borderColor = UIColor.black.cgColor
+        runGroupLogoImageView.layer.borderWidth = 2
     }
     
     func updateWithPost(runGroup: RunGroup) {
         guard let runLogo = runGroup.runLogo else {
             return
         }
-        runPaceLabel?.text = runGroup.runPace
+        runPaceLabel?.text = "\(runGroup.runPace)MIN/MILE"
         runGroupNameLabel?.text = runGroup.runGroupName
         runGroupLocationLabel?.text = runGroup.runGroupLocation
         runGroupLogoImageView?.image = UIImage(data: runLogo)

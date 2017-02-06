@@ -19,7 +19,7 @@ class RunGroupController {
     var cloudKitManager = CloudKitManager()
     
     // Chage pace to Double???
-    func createRunGroup(image: UIImage, name: String, pace: String, location: String) {
+    func createRunGroup(image: UIImage, name: String, pace: Double, location: String) {
         guard let imageData = UIImageJPEGRepresentation(image, 1.0) else { return }
         let rgName = RunGroup(runLogo: imageData, runGroupName: name, runPace: pace, runGroupLocation: location)
         
@@ -36,8 +36,8 @@ class RunGroupController {
     func syncedRecords(type: String) -> [CLoudKitSyncable] {
         var records: [CLoudKitSyncable] = []
         runGroup.forEach { (run) in
-            if run.cloudKitRecordID != nil { records.append(run as! CLoudKitSyncable) }
-//            run.runGroupName.forEach { (rgName) in
+            if run.cloudKitRecordID != nil { records.append(runGroup as! CLoudKitSyncable) }
+//            run.cloudKitRecordID.forEach { (rgName) in
 //                if runGroupName.cloudKitRecordID != nil { records.append(rgName) }
 //                }
 //            }

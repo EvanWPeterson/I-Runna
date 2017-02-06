@@ -17,6 +17,7 @@
 		D12626151E3A763D0095BCC0 /* RunGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12626141E3A763D0095BCC0 /* RunGroupTableViewCell.swift */; };
 		D12626171E3A7AF80095BCC0 /* SearchableRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12626161E3A7AF80095BCC0 /* SearchableRecord.swift */; };
 		D12626411E3BEDAB0095BCC0 /* PhotoSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12626401E3BEDAB0095BCC0 /* PhotoSelectViewController.swift */; };
+		D1285C901E4922DF007A2F1C /* RunMapDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1285C8F1E4922DF007A2F1C /* RunMapDetailViewController.swift */; };
 		D1298D141E3912CF002CB134 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1298D131E3912CF002CB134 /* AppDelegate.swift */; };
 		D1298D191E3912CF002CB134 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1298D171E3912CF002CB134 /* Main.storyboard */; };
 		D1298D1B1E3912CF002CB134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1298D1A1E3912CF002CB134 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		D12626141E3A763D0095BCC0 /* RunGroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunGroupTableViewCell.swift; sourceTree = "<group>"; };
 		D12626161E3A7AF80095BCC0 /* SearchableRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchableRecord.swift; sourceTree = "<group>"; };
 		D12626401E3BEDAB0095BCC0 /* PhotoSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSelectViewController.swift; sourceTree = "<group>"; };
+		D1285C8F1E4922DF007A2F1C /* RunMapDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunMapDetailViewController.swift; sourceTree = "<group>"; };
 		D1298D101E3912CF002CB134 /* I Runna.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "I Runna.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1298D131E3912CF002CB134 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1298D181E3912CF002CB134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				D126260F1E3961DE0095BCC0 /* AddRunGroupViewController.swift */,
 				D11AF2431E43B1520095897A /* RunGroupInfoViewController.swift */,
 				D11AF2371E4246CB0095897A /* AddRunViewController.swift */,
+				D1285C8F1E4922DF007A2F1C /* RunMapDetailViewController.swift */,
 				D12626401E3BEDAB0095BCC0 /* PhotoSelectViewController.swift */,
 			);
 			name = "View Controllers";
@@ -246,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1285C901E4922DF007A2F1C /* RunMapDetailViewController.swift in Sources */,
 				D12626171E3A7AF80095BCC0 /* SearchableRecord.swift in Sources */,
 				D1298D271E39133C002CB134 /* RunGroup .swift in Sources */,
 				D11AF2441E43B1520095897A /* RunGroupInfoViewController.swift in Sources */,
