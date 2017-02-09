@@ -12,64 +12,65 @@ import CloudKit
 
 class RunGroupController {
     
-    static let sharedController = RunGroupController()
+    //Referencing and syncing
     
-    var runGroup: [RunGroup] = []
+    
+    static let postsChangedNotification = Notification.Name("PostsChangedNotification")
+    static let runPostsChangedNotification = Notification.Name("RunPostsChangedNotification")
+    
+    static let sharedController = RunGroupController()
     
     var cloudKitManager = CloudKitManager()
     
-    // Chage pace to Double???
-    func createRunGroup(image: UIImage, name: String, pace: Double, location: String) {
-        guard let imageData = UIImageJPEGRepresentation(image, 1.0) else { return }
-        let rgName = RunGroup(runLogo: imageData, runGroupName: name, runPace: pace, runGroupLocation: location)
+//    var runInfo: [RunInfo] = []
+    var runGroup: [RunGroup] = [] {
+        didSet {
+            DispatchQueue.main.async {
+                let nc = NotificationCenter.default
+                nc.post(name: RunGroupController.postsChangedNotification, object: self)
+            }
+        }
+    }
+    
+    init() {
+        fetchRun()
+    }
+    
+
+    
+    
+    func createRunGroup(image: UIImage, name: String, pace: Double, location: String, rInfo: String) {
+        guard let imageData = UIImageJPEGRepresentation(image, 0.8) else { return }
+        let runGroup = RunGroup(runLogo: imageData, runGroupName: name, runPace: pace, runGroupLocation: location)
         
-        let runRecord = CKRecord(runGroup: rgName)
-        self.runGroup.append(rgName)
+        let runRecord = CKRecord(runGroup: runGroup)
+        self.runGroup.append(runGroup)
         cloudKitManager.saveRecord(runRecord) { (record, error) in
             if let error = error {
                 print("Error saving run group to app: \(error)")
             }
-        rgName.cloudKitRecordID = record?.recordID
+        
+        runGroup.cloudKitRecordID = record?.recordID
         }
     }
     
-    func syncedRecords(type: String) -> [CLoudKitSyncable] {
-        var records: [CLoudKitSyncable] = []
-        runGroup.forEach { (run) in
-            if run.cloudKitRecordID != nil { records.append(runGroup as! CLoudKitSyncable) }
-//            run.cloudKitRecordID.forEach { (rgName) in
-//                if runGroupName.cloudKitRecordID != nil { records.append(rgName) }
-//                }
-//            }
-    }
-        return records
-
-}
-    // Forced unwrap
-    func unsyncedRecords(type: String) -> [CLoudKitSyncable] {
-        var records: [CLoudKitSyncable] = []
-        runGroup.forEach { (run) in
-            if run.cloudKitRecordID != nil { records.append(run as! CLoudKitSyncable) }
+    func fetchRun() {
+        
+//        let sortDescriptor = NSSortDescriptor(key: RunGroup.kRecordType, ascending: false)
+        
+        
+        cloudKitManager.fetchAllRecords(forType: RunGroup.kRecordType, sortDescriptors: []) { (records, error) in
+            if let error = error {
+                print("Error fetching records from CloudKit: \(error.localizedDescription)")
+                
+            }
+            if let records = records {
+                self.runGroup = records.flatMap { RunGroup(cloudKitRecord: $0) }
+        
+            }
         }
-        return records
-        
-    }
-    
-    
-    func fetchNewRecords(type: String, completion: @escaping ((Error?) -> Void) = {_ in}) {
-        
     }
 
-
-    func pushChangeToCloudkit() {
-        
-    }
-    
-    func performFullSync() {
-        
-    }
-    
-    func deleteRunGroup() {
-        
-    }
 }
+
+

@@ -66,7 +66,7 @@ class AddRunGroupViewController: UIViewController, UITextFieldDelegate, PhotoSel
             let pace = runPaceTextField.text,
             let location = locationGroupRunTextField.text {
             
-            RunGroupController.sharedController.createRunGroup(image: image, name: name, pace: doubleRun, location: location)
+            RunGroupController.sharedController.createRunGroup(image: image, name: name, pace: doubleRun, location: location, rInfo: "")
             self.dismiss(animated: true, completion: nil)
         } else if runGroupNameTextField.text == nil {
             let alertController = UIAlertController(title: "Missing information", message: "Check your above information", preferredStyle: .alert)
@@ -82,7 +82,8 @@ class AddRunGroupViewController: UIViewController, UITextFieldDelegate, PhotoSel
             nextVC.delegate = self 
         } 
     }
-    @IBAction func cancelButtonTapped(_ sender: Any) {
+    
+    @IBAction func cancelRunGroupButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
 }

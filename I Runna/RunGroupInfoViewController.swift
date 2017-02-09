@@ -10,6 +10,8 @@ import UIKit
 
 class RunGroupInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    var sourceTableViewController: UITableViewController?
+    var resultsArray: [SearchableRecord] = []
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -29,6 +31,14 @@ class RunGroupInfoViewController: UIViewController, UITableViewDelegate, UITable
         runLogoImageView.layer.masksToBounds = true
         runLogoImageView.layer.borderColor = UIColor.black.cgColor
         runLogoImageView.layer.borderWidth = 2
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(runsWereUpdated), name: RunGroupController.runPostsChangedNotification, object: runInfo)
+    }
+    
+    
+    
+    func runsWereUpdated() {
+        self.tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,10 +48,11 @@ class RunGroupInfoViewController: UIViewController, UITableViewDelegate, UITable
     
     
     func updateWithRunGroupPost() {
-        guard let runLogo = runGroup?.runLogo else { return }
+         guard let runGroup = runGroup,
+            let runLogo = runGroup.runLogo else { return }
         
-        runPaceLabel.text = "\(runGroup?.runPace)MIN/MILE"
-        runGroupLocationLabel.text = runGroup?.runGroupLocation
+        runPaceLabel.text = "\(runGroup.runPace)MIN/MILE"
+        runGroupLocationLabel.text = runGroup.runGroupLocation
         runLogoImageView.image = UIImage(data: runLogo)
     }
     

@@ -22,31 +22,4 @@ class RunInfoController {
         
         self.runInfo.append(rInfo)
     }
-    
-    func syncedRecords() {
-        
-    }
-    
-    func unsyncedRecords() {
-        
-    }
-    
-    func fetchNewRecords() {
-        
-    }
-    
-    func pushChangeToCloudKit() {
-        
-    }
-    
-    func performFullSync() {
-        
-    }
-    
-    func deleteRun() {
-        
-    }
-    
-    
-    
 }

@@ -17,6 +17,8 @@ private let ModificationDateKey = "modificationDate"
 
 class CloudKitManager {
     
+    static let sharedController = CloudKitManager()
+    
     let publicDatabase = CKContainer.default().publicCloudDatabase
     let privateDatabase = CKContainer.default().privateCloudDatabase
     
@@ -383,5 +385,15 @@ class CloudKitManager {
                 rootViewController.present(alertController, animated: true, completion: nil)
             }
         })
+    }
+    
+    func fetchAllRecords(forType type: String, sortDescriptors: [NSSortDescriptor]? = nil, completion: (([CKRecord]?, Error?) -> Void)? = nil) {
+        
+        let query = CKQuery(recordType: type, predicate: NSPredicate(value: true))
+        query.sortDescriptors = sortDescriptors
+        
+        publicDatabase.perform(query, inZoneWith: nil) { (records, error) in
+            completion?(records, error)
+        }
     }
 } // break it to them, give the excuse

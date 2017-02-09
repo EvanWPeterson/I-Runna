@@ -11,12 +11,12 @@ import CloudKit
 
 class RunInfo {
     
-    static let kRecordType = "RunInfo"
-    var kRunName = "runName"
-    var kRunLength = "runLength"
-    var kRunTime = "runTime"
-    var kDetailsOfRun = "detailsOfRun"
-    var kRunLocation = "runLocation"
+     static let kRecordType = "RunInfo"
+     var kRunName = "runName"
+     var kRunLength = "runLength"
+     var kRunTime = "runTime"
+     var kDetailsOfRun = "detailsOfRun"
+     var kRunLocation = "runLocation"
     
     var runName: String
     var runLength: Double
@@ -25,7 +25,7 @@ class RunInfo {
     var runLocation: String
     
     var recordType: String { return "RunInfo" }
-    var cloudKitRecordID: CKRecordID?
+//    var cloudKitRecordID: CKRecordID?
     
     init(runName: String, runLength: Double, runTime: Date, detailsOfRun: String, runLocation: String) {
         self.runName = runName
@@ -37,8 +37,8 @@ class RunInfo {
     
     required init?(record: CKRecord) {
         guard let runName = record.value(forKey: kRunName) as? String,
-        let runLength = record.value(forKey: kRunLength) as? Double,
-        let runTime = record.value(forKey: kRunTime) as? Date,
+            let runLength = record.value(forKey: kRunLength) as? Double,
+            let runTime = record.value(forKey: kRunTime) as? Date,
             let detailsOfRun = record.value(forKey: kDetailsOfRun) as? String,
             let runLocation = record.value(forKey: kRunLocation) as? String else { return nil }
         
@@ -47,7 +47,7 @@ class RunInfo {
         self.runDateTime = runTime
         self.detailsOfRun = detailsOfRun
         self.runLocation = runLocation
-        self.cloudKitRecordID = record.recordID
+//        self.cloudKitRecordID = record.recordID
     }
     
 }

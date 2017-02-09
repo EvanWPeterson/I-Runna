@@ -22,7 +22,7 @@
 		D1298D191E3912CF002CB134 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1298D171E3912CF002CB134 /* Main.storyboard */; };
 		D1298D1B1E3912CF002CB134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1298D1A1E3912CF002CB134 /* Assets.xcassets */; };
 		D1298D1E1E3912CF002CB134 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1298D1C1E3912CF002CB134 /* LaunchScreen.storyboard */; };
-		D1298D271E39133C002CB134 /* RunGroup .swift in Sources */ = {isa = PBXBuildFile; fileRef = D1298D261E39133C002CB134 /* RunGroup .swift */; };
+		D1298D271E39133C002CB134 /* RunGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1298D261E39133C002CB134 /* RunGroup.swift */; };
 		D1298D2C1E391956002CB134 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1298D2B1E391956002CB134 /* CloudKit.framework */; };
 		D1298D2E1E391A1F002CB134 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1298D2D1E391A1F002CB134 /* CloudKitManager.swift */; };
 		D1298D311E391A8E002CB134 /* RunGroupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1298D301E391A8E002CB134 /* RunGroupController.swift */; };
@@ -47,7 +47,7 @@
 		D1298D1A1E3912CF002CB134 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1298D1D1E3912CF002CB134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1298D1F1E3912CF002CB134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D1298D261E39133C002CB134 /* RunGroup .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RunGroup .swift"; sourceTree = "<group>"; };
+		D1298D261E39133C002CB134 /* RunGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunGroup.swift; sourceTree = "<group>"; };
 		D1298D291E391941002CB134 /* I Runna.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "I Runna.entitlements"; sourceTree = "<group>"; };
 		D1298D2B1E391956002CB134 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		D1298D2D1E391A1F002CB134 /* CloudKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 		D1298D281E391343002CB134 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D1298D261E39133C002CB134 /* RunGroup .swift */,
+				D1298D261E39133C002CB134 /* RunGroup.swift */,
 				D1298D331E392322002CB134 /* RunInfo .swift */,
 				D12626161E3A7AF80095BCC0 /* SearchableRecord.swift */,
 			);
@@ -251,7 +251,7 @@
 			files = (
 				D1285C901E4922DF007A2F1C /* RunMapDetailViewController.swift in Sources */,
 				D12626171E3A7AF80095BCC0 /* SearchableRecord.swift in Sources */,
-				D1298D271E39133C002CB134 /* RunGroup .swift in Sources */,
+				D1298D271E39133C002CB134 /* RunGroup.swift in Sources */,
 				D11AF2441E43B1520095897A /* RunGroupInfoViewController.swift in Sources */,
 				D12626151E3A763D0095BCC0 /* RunGroupTableViewCell.swift in Sources */,
 				D1298D341E392322002CB134 /* RunInfo .swift in Sources */,

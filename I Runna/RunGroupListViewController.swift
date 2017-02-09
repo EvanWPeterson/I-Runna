@@ -8,17 +8,23 @@
 
 import UIKit
 
-class RunGroupListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class RunGroupListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating {
+    
+    var searchController: UISearchController?
+    
+    private var resultsController: RunGroupInfoViewController?
     
     @IBOutlet weak var tableView: UITableView!
-//    var resultsArray: [SearchableRecord] = []
+    
+    var refreshControl = UIRefreshControl()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.reloadData()
         
         
-
+        
         gradientLayer.colors = [color1.cgColor, color2.cgColor]
         gradientLayer.frame = view.bounds
         
@@ -29,10 +35,14 @@ class RunGroupListViewController: UIViewController, UITableViewDelegate, UITable
         backgroundView.layer.insertSublayer(gradientLayer, at: 0)
         tableView.backgroundView = backgroundView
         
-//        view.layer.addSublayer(gradientLayer)
-//        tableView.backgroundView?.layer.addSublayer(gradientLayer)
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        self.refreshControl.addTarget(self, action: #selector(refresh), for: UIControlEvents.valueChanged)
+        self.tableView?.addSubview(refreshControl)
         
-
+        let nc = NotificationCenter.default
+        nc.addObserver(self, selector: #selector(postsWereUpdated), name: RunGroupController.postsChangedNotification, object: nil)
+        
     }
     
     let gradientLayer = CAGradientLayer()
@@ -40,15 +50,25 @@ class RunGroupListViewController: UIViewController, UITableViewDelegate, UITable
     let color1 = UIColor(red: 76/255, green: 75/255, blue: 92/255, alpha: 1.0)
     let color2 = UIColor(red: 112/255, green: 111/255, blue: 126/255, alpha: 0.75)
     
+    func postsWereUpdated() {
+        tableView.reloadData()
+    }
     
-     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.backgroundColor = UIColor.darkGray
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
+    func refresh(sender: Any) {
+        
     }
     
     
-
-    override func viewWillAppear(_ animated: Bool) {
-        tableView.reloadData()
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.darkGray
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -63,15 +83,35 @@ class RunGroupListViewController: UIViewController, UITableViewDelegate, UITable
         return cell
     }
     
+//     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete {
+//            let runGroup = RunGroupController.sharedController.runGroup(at: indexPath)
+//            RunGroupController.sharedController.remove(runGroup: runGroup)
+//            
+//        }
+//    }
+    
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        if let searchTerm = searchController.searchBar.text {
+            let filteredPost = RunGroupController.sharedController.runGroup.filter { $0.matchesSearchTerm(searchTerm: searchTerm) }
+            resultsController?.resultsArray = filteredPost
+            resultsController?.reloadInputViews()
+        }
+    }
+    
 
-
+    
+    
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toRunInfo" {
             if let indexPath = tableView.indexPathForSelectedRow {
-            let runGroup = RunGroupController.sharedController.runGroup[indexPath.row]
+                let runGroup = RunGroupController.sharedController.runGroup[indexPath.row]
                 if let runGroupInfoViewController = segue.destination as? RunGroupInfoViewController {
-            runGroupInfoViewController.runGroup = runGroup
-                
+                    runGroupInfoViewController.runGroup = runGroup
+                    
                 }
             }
         }

@@ -8,10 +8,10 @@
 
 import UIKit
 
-class AddRunViewController: UIViewController, UITextFieldDelegate {
+class AddRunViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
     
-    @IBOutlet weak var runDetailTextField: UITextField!
+    @IBOutlet weak var runDetailTextView: UITextView!
     @IBOutlet weak var runLocationTextField: UITextField!
     @IBOutlet weak var runTimeTextField: UITextField!
     @IBOutlet weak var runLengthTextField: UITextField!
@@ -36,7 +36,7 @@ class AddRunViewController: UIViewController, UITextFieldDelegate {
         
         runLengthTextField.delegate = self
         runNameTextField.delegate = self
-        runDetailTextField.delegate = self
+        runDetailTextView.delegate = self
         runLocationTextField.delegate = self
         runTimeTextField.delegate = self
         
@@ -46,7 +46,7 @@ class AddRunViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         runLengthTextField.resignFirstResponder()
         runNameTextField.resignFirstResponder()
-        runDetailTextField.resignFirstResponder()
+        runDetailTextView.resignFirstResponder()
         runLocationTextField.resignFirstResponder()
         runTimeTextField.resignFirstResponder()
         
@@ -81,7 +81,7 @@ class AddRunViewController: UIViewController, UITextFieldDelegate {
         guard let runLength = runLengthTextField.text, let doubleRun = Double(runLength) else { return }
         
         
-        if let runDetails = runDetailTextField.text,
+        if let runDetails = runDetailTextView.text,
             let runLocation = runLocationTextField.text,
             let rName = runNameTextField.text,
             let rDateTime = datePicker?.date {
